@@ -1,4 +1,3 @@
-import flask
 import functions
 import validators
 import urllib
@@ -21,12 +20,11 @@ db = deta.Base(conf["deta_base_name"])
 
 @app.route('/', methods=['GET', 'POST'])
 def empty():
-    return "Welcome to the URL shortener's backend! For more information/ usage, visit our github:"
+    return redirect(f"{request.base_url}/home")
 
 @app.route('/home', methods=['GET', 'POST'])
 def home():
-    return "home"
-
+    return "Welcome to the URL shortener's backend! For more information/ usage, visit our github:"
 
 @app.route('/create', methods=['GET', 'POST'])
 def convert_to_id():
@@ -61,5 +59,4 @@ def convert_to_url(arg):
     else:
         return Response(status=404)
 
-    
-app.run()
+# No app.run() because we are using Deta Micros
