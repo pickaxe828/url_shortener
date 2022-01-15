@@ -3,8 +3,6 @@ credentials.jsonc
 url_shortener.jsonc
 *.pyc
 
-credentials.jsonc
-
 # Folder
 .deta/
 __pycache__/
