@@ -5,6 +5,4 @@ url_shortener.jsonc
 
 # Folder
 __pycache__/
-.deta/
-.deta/state
-.deta/prog_info
+.deta/**
