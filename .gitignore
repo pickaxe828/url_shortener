@@ -4,5 +4,4 @@ url_shortener.jsonc
 *.pyc
 
 # Folder
-.deta/
 __pycache__/
