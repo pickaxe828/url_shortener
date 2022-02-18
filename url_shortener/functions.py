@@ -5,4 +5,4 @@ def randb58str(length):
              for _ in range(length))
              
 if __name__ == "__main__":
-	print(randb58str(8))
+	print(randb58str(7))
