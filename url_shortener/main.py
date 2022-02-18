@@ -18,13 +18,13 @@ deta = Deta(conf["deta_api_token"])
 db = deta.Base(conf["deta_base_name"])
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET'])
 def empty():
-    return redirect(f"{request.base_url}/home")
+    return redirect(f"{request.base_url}home")
 
-@app.route('/home', methods=['GET', 'POST'])
+@app.route('/home', methods=['GET'])
 def home():
-    return "Welcome to the URL shortener's backend! For more information/ usage, visit our github:"
+    return "Welcome to the URL shortener's backend! For more information/ usage, visit our github: "
 
 @app.route('/create', methods=['GET', 'POST'])
 def convert_to_id():
